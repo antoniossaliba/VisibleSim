@@ -49,7 +49,9 @@ ifeq ($(OS),Darwin)
 #MacOS (Assuming you are using the Clang compiler)
 OSX_CCFLAGS = -DGL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED -Wno-deprecated-declarations -Wno-overloaded-virtual
 
-GLOBAL_LIBS = "-L./ -L/usr/local/lib /usr/local/lib/libmuparser.dylib -lGLEW -lglut -framework GLUT -framework OpenGL -L/usr/X11/lib /usr/local/lib/libglut.dylib $(VSIM_LIBS) $(INC_BOOST_IF_NEEDED)"
+# Use Homebrew paths for libraries on macOS
+HOMEBREW_PREFIX = /opt/homebrew
+GLOBAL_LIBS = "-L./ -L$(HOMEBREW_PREFIX)/lib -lmuparser -lGLEW -framework GLUT -framework OpenGL $(VSIM_LIBS) $(INC_BOOST_IF_NEEDED)"
 
 else
 
@@ -68,7 +70,13 @@ GLOBAL_CCFLAGS = "$(TEMP_CCFLAGS) $(OSX_CCFLAGS)"
 
 SUBDIRS = simulatorCore/src applicationsSrc
 
+# Include paths for macOS - prioritize GLEW from Homebrew
+ifeq ($(OS),Darwin)
+HOMEBREW_PREFIX = /opt/homebrew
+GLOBAL_INCLUDES = "-I$(HOMEBREW_PREFIX)/opt/glew/include -I$(HOMEBREW_PREFIX)/include -I/opt/local/include"
+else
 GLOBAL_INCLUDES = "-I/usr/local/include -I/opt/local/include -I/usr/X11/include"
+endif
 
 .PHONY: subdirs $(SUBDIRS) test doc replay
 #.PHONY: subdirs $(SUBDIRS) test doc

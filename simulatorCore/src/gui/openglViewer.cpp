@@ -12,6 +12,7 @@
 #include <sys/stat.h>
 #include <future>
 
+#include "glutCompat.h"  // GLUT compatibility layer
 #include "openglViewer.h"
 #include "../base/world.h"
 #include "../events/scheduler.h"
@@ -533,8 +534,7 @@ void GlutContext::keyboardFunc(unsigned char c, int x, int y) {
         case ',':
             enableShowFPS = !enableShowFPS;
             break;
-        case GLUT_KEY_DELETE :
-        case 127 :
+        case 127 :  // GLUT_KEY_DELETE / ASCII DEL
         case 'd' : {
             auto wrld = BaseSimulator::getWorld();
             auto bb = wrld->getSelectedBuildingBlock();

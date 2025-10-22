@@ -12,15 +12,7 @@
 #include <windows.h>
 #endif
 
-#if defined(_WIN32) || defined(__linux__)
-#include <GL/glew.h>
-#include <GL/freeglut.h>
-#endif
-
-#ifdef __APPLE__
-#include <GL/glew.h>
-#include <GL/freeglut.h> // modifier avec freeglut et repertoire
-#endif
+#include "glutCompat.h"
 
 #include <math.h>
 #include "../math/vector3D.h"

@@ -1,5 +1,8 @@
 <?xml version="1.0" standalone="no" ?>
-<world gridSize="11,10,1" windowSize="1024,800">
+<world gridSize="11,10,1">
+    <visuals>
+        <window size="1024,800"/>
+    </visuals>
     <camera target="356.5,175.274,18.2981" directionSpherical="0,70,640" angle="45.000000" near="1.000000" far="1500.000000" />
     <spotlight target="200,180,0" directionSpherical="-45,40,500" angle="56.309932" />
     <blockList blockSize="50,50,12.5">

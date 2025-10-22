@@ -6,11 +6,9 @@
 #include <iostream>
 #include <fstream>
 
-#include <GL/glew.h>
-#include <GL/freeglut.h>
+#include "glutCompat.h"
 
 #if defined(__APPLE__)
-#include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 #else
 #include <GL/gl.h>

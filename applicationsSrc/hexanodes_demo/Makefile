@@ -35,14 +35,18 @@ OS = $(shell uname -s)
 SIMULATORLIB = $(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)
 
 ifeq ($(GLOBAL_INCLUDES), )
+	ifeq ($(OS),Darwin)
+INCLUDES = -I. -I../../simulatorCore/src -I/opt/homebrew/opt/glew/include -I/opt/homebrew/include -I/opt/local/include
+	else
 INCLUDES = -I. -I../../simulatorCore/src -I/usr/local/include -I/opt/local/include -I/usr/X11/include
+	endif
 else
 INCLUDES = -I. -I../../simulatorCore/src $(GLOBAL_INCLUDES)
 endif
 
 ifeq ($(GLOBAL_LIBS), )
 	ifeq ($(OS),Darwin)
-LIBS = -L./ -L../../simulatorCore/lib -L/usr/local/lib -lGLEW -lglut -framework GLUT -framework OpenGL -L/usr/X11/lib /usr/local/lib/libglut.dylib /usr/local/lib/libmuparser.dylib $(MODULELIB)
+LIBS = -L./ -L../../simulatorCore/lib -L/opt/homebrew/lib -lGLEW -lmuparser -framework GLUT -framework OpenGL $(MODULELIB)
 	else
 LIBS = -L./ -L../../simulatorCore/lib -L/usr/local/lib -L/opt/local/lib -L/usr/X11/lib -lglut -lGL -lGLU -lGLEW -lpthread -lm -ldl -lmuparser $(MODULELIB)
 	endif				#OS

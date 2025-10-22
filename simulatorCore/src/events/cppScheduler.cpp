@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <chrono>
 
+#include "../gui/glutCompat.h"  // GLUT compatibility layer
 #include "cppScheduler.h"
 #include "../base/buildingBlock.h"
 #include "../base/blockCode.h"

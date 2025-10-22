@@ -126,17 +126,54 @@ IF (LINUX)
 ENDIF (LINUX)
 
 IF(APPLE)
-    message(STATUS ">>> APPLE SILICON")
+    message(STATUS ">>> APPLE SILICON / macOS")
+    
+    # Find required packages
     find_package(OpenGL REQUIRED)
+    find_package(GLEW REQUIRED)
+    find_package(GLUT REQUIRED)
+    
+    # Set architecture
     set(CMAKE_OSX_ARCHITECTURES "arm64")
-    set(GLEW_INCLUDE_DIRS /opt/homebrew/include)
-    set(GLEW_LIBRARY_DIRS /opt/homebrew/lib)
-    set(GLUT_INCLUDE_DIRS /opt/homebrew/include)
-    set(GLUT_LIBRARY_DIRS /opt/homebrew/lib)
-    set(muparser_LIBRARY_DIRS /opt/homebrew/lib)
-    set(muparser_INCLUDE_DIRS /opt/homebrew/include)
-    link_directories(${ROBOTS_LIBRARY_DIRS} ${FREEGLUT_LIBRARY_DIRS} ${GLEW_LIBRARY_DIRS} ${muparser_LIBRARY_DIRS})
-    include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${muparser_INCLUDE_DIRS})
+    
+    # Set minimum macOS version for compatibility
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
+    
+    # Homebrew paths for Apple Silicon
+    set(HOMEBREW_PREFIX "/opt/homebrew")
+    
+    # GLEW configuration - use Homebrew GLEW with proper includes
+    set(GLEW_INCLUDE_DIRS ${HOMEBREW_PREFIX}/opt/glew/include)
+    set(GLEW_LIBRARY_DIRS ${HOMEBREW_PREFIX}/lib)
+    
+    # muparser configuration  
+    set(muparser_LIBRARY_DIRS ${HOMEBREW_PREFIX}/lib)
+    set(muparser_INCLUDE_DIRS ${HOMEBREW_PREFIX}/include)
+    
+    # Set library directories
+    link_directories(${GLEW_LIBRARY_DIRS} ${muparser_LIBRARY_DIRS})
+    
+    # Set include directories - IMPORTANT: System GLUT before Homebrew to avoid FreeGLUT headers
+    include_directories(BEFORE SYSTEM
+        ${GLUT_INCLUDE_DIRS}
+    )
+    
+    include_directories(
+        ${OPENGL_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${muparser_INCLUDE_DIRS}
+    )
+    
+    # Add framework search paths for macOS - Use native macOS GLUT Framework
+    link_libraries(
+        ${OPENGL_LIBRARIES}
+        ${GLUT_LIBRARIES}
+        GLEW::GLEW
+    )
+    
+    # Add compile definitions for macOS
+    add_compile_definitions(GL_SILENCE_DEPRECATION)
+    
 ENDIF(APPLE)
 
 include_directories(simulatorCore/src)
@@ -147,7 +184,7 @@ ADD_SUBDIRECTORY(simulatorCore)
 # set(GLEW_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/glew/include")
 
 add_executable(simpleColorBB applicationsSrc/simpleColorBB/simpleColorBB.cpp applicationsSrc/simpleColorBB/simpleColorCodeBB.cpp)
-target_link_libraries(simpleColorBB BlinkyBlocks)
+target_link_libraries(simpleColorBB BlinkyBlocks )
 set_target_properties(simpleColorBB PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/applicationsBin/simpleColorBB)
 
 

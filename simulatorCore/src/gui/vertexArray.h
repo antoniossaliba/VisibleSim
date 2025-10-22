@@ -1,8 +1,7 @@
 #ifndef VERTEXARRAY_H_
 #define VERTEXARRAY_H_
 
-#include <GL/glew.h>
-#include <GL/freeglut.h>
+#include "glutCompat.h"
 
 class VertexArray {
 	GLfloat *tabVertices,*tabNormals,*tabTexCoords;

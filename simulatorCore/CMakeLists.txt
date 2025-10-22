@@ -373,12 +373,21 @@ set(COMMON_SRC_FILES
 )
 add_library(src STATIC ${COMMON_SRC_FILES})
 IF (APPLE)
-        target_link_libraries(src    muparser   -lGLEW  ${GLUT_LIBRARY_DIRS}/libglut.dylib  OpenGL::GL)
+        find_package(GLUT REQUIRED)
+        target_link_libraries(src 
+            muparser 
+            GLEW::GLEW 
+            OpenGL::GL 
+            ${GLUT_LIBRARIES}
+            "-framework Cocoa"
+            "-framework IOKit"
+            "-framework CoreVideo"
+        )
 ENDIF (APPLE)
 
 IF (WIN32)
         message(GLUT  ${CMAKE_SOURCE_DIR})
-        target_link_libraries(src freeglut_static libglew_static opengl32 glu32 muparser::muparser)
+        target_link_libraries(src glfw libglew_static opengl32 glu32 muparser::muparser)
 ENDIF (WIN32)
 
 add_library(BlinkyBlocks STATIC
