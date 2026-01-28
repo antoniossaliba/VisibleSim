@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: VisibleSim
-# Configurations: Release
+# Configurations: Realease
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__BlinkyBlocks_unscanned_Release
+rule CXX_COMPILER__BlinkyBlocks_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__BlinkyBlocks_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__BlinkyBlocks_Release
+rule CXX_STATIC_LIBRARY_LINKER__BlinkyBlocks_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -33,7 +33,7 @@ rule CXX_STATIC_LIBRARY_LINKER__BlinkyBlocks_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Catoms3D_unscanned_Release
+rule CXX_COMPILER__Catoms3D_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule CXX_COMPILER__Catoms3D_unscanned_Release
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__Catoms3D_Release
+rule CXX_SHARED_LIBRARY_LINKER__Catoms3D_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -52,7 +52,7 @@ rule CXX_SHARED_LIBRARY_LINKER__Catoms3D_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__SmartBlocks_unscanned_Release
+rule CXX_COMPILER__SmartBlocks_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -62,7 +62,7 @@ rule CXX_COMPILER__SmartBlocks_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__SmartBlocks_Release
+rule CXX_STATIC_LIBRARY_LINKER__SmartBlocks_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -71,7 +71,7 @@ rule CXX_STATIC_LIBRARY_LINKER__SmartBlocks_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Hexanodes_unscanned_Release
+rule CXX_COMPILER__Hexanodes_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -81,7 +81,7 @@ rule CXX_COMPILER__Hexanodes_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__Hexanodes_Release
+rule CXX_STATIC_LIBRARY_LINKER__Hexanodes_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -90,7 +90,7 @@ rule CXX_STATIC_LIBRARY_LINKER__Hexanodes_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Datoms_unscanned_Release
+rule CXX_COMPILER__Datoms_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -100,7 +100,7 @@ rule CXX_COMPILER__Datoms_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__Datoms_Release
+rule CXX_STATIC_LIBRARY_LINKER__Datoms_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -109,7 +109,7 @@ rule CXX_STATIC_LIBRARY_LINKER__Datoms_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__SlidingCubes_unscanned_Release
+rule CXX_COMPILER__SlidingCubes_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -119,7 +119,7 @@ rule CXX_COMPILER__SlidingCubes_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__SlidingCubes_Release
+rule CXX_STATIC_LIBRARY_LINKER__SlidingCubes_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\msys64\mingw64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\msys64\mingw64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -128,7 +128,7 @@ rule CXX_STATIC_LIBRARY_LINKER__SlidingCubes_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__stressTestSB_unscanned_Release
+rule CXX_COMPILER__stressTestSB_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -138,7 +138,7 @@ rule CXX_COMPILER__stressTestSB_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__stressTestSB_Release
+rule CXX_EXECUTABLE_LINKER__stressTestSB_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -147,7 +147,7 @@ rule CXX_EXECUTABLE_LINKER__stressTestSB_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__simpleColorBB_unscanned_Release
+rule CXX_COMPILER__simpleColorBB_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -157,7 +157,7 @@ rule CXX_COMPILER__simpleColorBB_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__simpleColorBB_Release
+rule CXX_EXECUTABLE_LINKER__simpleColorBB_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -166,7 +166,7 @@ rule CXX_EXECUTABLE_LINKER__simpleColorBB_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__simpleColorSB_unscanned_Release
+rule CXX_COMPILER__simpleColorSB_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -176,7 +176,7 @@ rule CXX_COMPILER__simpleColorSB_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__simpleColorSB_Release
+rule CXX_EXECUTABLE_LINKER__simpleColorSB_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -185,7 +185,7 @@ rule CXX_EXECUTABLE_LINKER__simpleColorSB_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__ants_unscanned_Release
+rule CXX_COMPILER__ants_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -195,7 +195,7 @@ rule CXX_COMPILER__ants_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__ants_Release
+rule CXX_EXECUTABLE_LINKER__ants_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -204,7 +204,7 @@ rule CXX_EXECUTABLE_LINKER__ants_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__demoMotionsC3D_unscanned_Release
+rule CXX_COMPILER__demoMotionsC3D_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -214,7 +214,7 @@ rule CXX_COMPILER__demoMotionsC3D_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__demoMotionsC3D_Release
+rule CXX_EXECUTABLE_LINKER__demoMotionsC3D_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -223,7 +223,7 @@ rule CXX_EXECUTABLE_LINKER__demoMotionsC3D_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__demoReconfC3D_unscanned_Release
+rule CXX_COMPILER__demoReconfC3D_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -233,7 +233,7 @@ rule CXX_COMPILER__demoReconfC3D_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__demoReconfC3D_Release
+rule CXX_EXECUTABLE_LINKER__demoReconfC3D_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -242,7 +242,7 @@ rule CXX_EXECUTABLE_LINKER__demoReconfC3D_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__myMotionTest_unscanned_Release
+rule CXX_COMPILER__myMotionTest_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -252,7 +252,7 @@ rule CXX_COMPILER__myMotionTest_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__myMotionTest_Release
+rule CXX_EXECUTABLE_LINKER__myMotionTest_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -261,7 +261,7 @@ rule CXX_EXECUTABLE_LINKER__myMotionTest_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__hexanodes_demo_unscanned_Release
+rule CXX_COMPILER__hexanodes_demo_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -271,7 +271,7 @@ rule CXX_COMPILER__hexanodes_demo_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__hexanodes_demo_Release
+rule CXX_EXECUTABLE_LINKER__hexanodes_demo_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -280,7 +280,7 @@ rule CXX_EXECUTABLE_LINKER__hexanodes_demo_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__myAppSC_unscanned_Release
+rule CXX_COMPILER__myAppSC_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -290,7 +290,7 @@ rule CXX_COMPILER__myAppSC_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__myAppSC_Release
+rule CXX_EXECUTABLE_LINKER__myAppSC_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -299,7 +299,7 @@ rule CXX_EXECUTABLE_LINKER__myAppSC_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__demo01_SC_unscanned_Release
+rule CXX_COMPILER__demo01_SC_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -309,7 +309,7 @@ rule CXX_COMPILER__demo01_SC_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__demo01_SC_Release
+rule CXX_EXECUTABLE_LINKER__demo01_SC_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -318,7 +318,7 @@ rule CXX_EXECUTABLE_LINKER__demo01_SC_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__catoms3DRotate_unscanned_Release
+rule CXX_COMPILER__catoms3DRotate_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -328,7 +328,7 @@ rule CXX_COMPILER__catoms3DRotate_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__catoms3DRotate_Release
+rule CXX_EXECUTABLE_LINKER__catoms3DRotate_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -337,7 +337,7 @@ rule CXX_EXECUTABLE_LINKER__catoms3DRotate_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__catomsCombination_unscanned_Release
+rule CXX_COMPILER__catomsCombination_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -347,7 +347,7 @@ rule CXX_COMPILER__catomsCombination_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__catomsCombination_Release
+rule CXX_EXECUTABLE_LINKER__catomsCombination_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -356,7 +356,7 @@ rule CXX_EXECUTABLE_LINKER__catomsCombination_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__e1_flooding_unscanned_Release
+rule CXX_COMPILER__e1_flooding_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -366,7 +366,7 @@ rule CXX_COMPILER__e1_flooding_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__e1_flooding_Release
+rule CXX_EXECUTABLE_LINKER__e1_flooding_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -375,7 +375,7 @@ rule CXX_EXECUTABLE_LINKER__e1_flooding_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__e2_goback_unscanned_Release
+rule CXX_COMPILER__e2_goback_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -385,7 +385,7 @@ rule CXX_COMPILER__e2_goback_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__e2_goback_Release
+rule CXX_EXECUTABLE_LINKER__e2_goback_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -394,7 +394,7 @@ rule CXX_EXECUTABLE_LINKER__e2_goback_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__e3_lightpath_unscanned_Release
+rule CXX_COMPILER__e3_lightpath_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -404,7 +404,7 @@ rule CXX_COMPILER__e3_lightpath_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__e3_lightpath_Release
+rule CXX_EXECUTABLE_LINKER__e3_lightpath_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -413,7 +413,7 @@ rule CXX_EXECUTABLE_LINKER__e3_lightpath_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__borders_unscanned_Release
+rule CXX_COMPILER__borders_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -423,7 +423,7 @@ rule CXX_COMPILER__borders_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__borders_Release
+rule CXX_EXECUTABLE_LINKER__borders_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -432,7 +432,7 @@ rule CXX_EXECUTABLE_LINKER__borders_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__myAppMotionSC_unscanned_Release
+rule CXX_COMPILER__myAppMotionSC_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -442,7 +442,7 @@ rule CXX_COMPILER__myAppMotionSC_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__myAppMotionSC_Release
+rule CXX_EXECUTABLE_LINKER__myAppMotionSC_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -451,7 +451,7 @@ rule CXX_EXECUTABLE_LINKER__myAppMotionSC_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__myCSGappBB_unscanned_Release
+rule CXX_COMPILER__myCSGappBB_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -461,7 +461,7 @@ rule CXX_COMPILER__myCSGappBB_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__myCSGappBB_Release
+rule CXX_EXECUTABLE_LINKER__myCSGappBB_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -470,7 +470,7 @@ rule CXX_EXECUTABLE_LINKER__myCSGappBB_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__BBbalance_unscanned_Release
+rule CXX_COMPILER__BBbalance_unscanned_Realease
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\msys64\mingw64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -480,7 +480,7 @@ rule CXX_COMPILER__BBbalance_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__BBbalance_Release
+rule CXX_EXECUTABLE_LINKER__BBbalance_Realease
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\msys64\mingw64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -498,7 +498,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -S"C:\Users\anton\OneDrive\Desktop\Programmable Matter Simulation Project - LAU - UMLP\Source Code\Self-Reconfiguration-Algorithm-for-Modular-Robots\VisibleSim" -B"C:\Users\anton\OneDrive\Desktop\Programmable Matter Simulation Project - LAU - UMLP\Source Code\Self-Reconfiguration-Algorithm-for-Modular-Robots\VisibleSim\build-mingw64"
+  command = C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -S"C:\Users\anton\OneDrive\Desktop\Programmable Matter Simulation Project - LAU - UMLP\VisibleSim" -B"C:\Users\anton\OneDrive\Desktop\Programmable Matter Simulation Project - LAU - UMLP\VisibleSim\build-mingw64"
   description = Re-running CMake...
   generator = 1
 

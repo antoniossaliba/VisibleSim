@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/Source Code/Self-Reconfiguration-Algorithm-for-Modular-Robots/VisibleSim/build-mingw64/cmake_install.cmake"
+		"C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
