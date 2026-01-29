@@ -6,7 +6,7 @@ using namespace SlidingCubes;
 
 int main(int argc, char **argv) {
     try {
-        createSimulator(argc, argv, ComeBackCode::buildNewBlockCode);
+        createSimulator(argc, argv, TestCaseCode::buildNewBlockCode);
         getSimulator()->printInfo();
         BaseSimulator::getWorld()->printInfo();
         deleteSimulator();

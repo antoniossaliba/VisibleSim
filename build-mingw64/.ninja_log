@@ -303,8 +303,8 @@
 22678	31219	7913349665940247	CMakeFiles/catomsCombination.dir/applicationsSrc/catomsCombination/catomsCombinationCode.cpp.obj	a792f5c41d4f89ea
 9937	10208	7913343735877542	simpleColorSB.exe	1847dd4a2022e7a2
 31220	31376	7913349751276805	catomsCombination.exe	2119534c35ad280f
-44	2313	7913967625491603	build.ninja	e1853d37789033a4
-44	2313	7913967625339531	C:/Users/anton/VisibleSim/build-mingw64/cmake_install.cmake	e1853d37789033a4
+44	2313	7914006997516936	build.ninja	e1853d37789033a4
+44	2313	7914006997451441	C:/Users/anton/VisibleSim/build-mingw64/cmake_install.cmake	e1853d37789033a4
 20392	28370	7913948432070546	CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBack.cpp.obj	9bca91f372192636
 26806	29460	7913948496160864	CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBackCode.cpp.obj	aa6e82cb8c03bc91
 28956	30296	7913948517558242	C:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a	86e0d64420997c6c
@@ -312,3 +312,6 @@
 86	3196	7913967693496199	CMakeFiles/testCase.dir/applicationsSrc/testCase/testCase.cpp.obj	2b2b3c9ece75ca29
 96	3229	7913967693627246	CMakeFiles/testCase.dir/applicationsSrc/testCase/testCaseCode.cpp.obj	b7f259d8e1329313
 3230	3774	7913967724996705	testCase.exe	2bdd1ee4d487a897
+86	2822	7914007073356483	CMakeFiles/testCase.dir/applicationsSrc/testCase/testCase.cpp.obj	2b2b3c9ece75ca29
+100	2880	7914007073626249	CMakeFiles/testCase.dir/applicationsSrc/testCase/testCaseCode.cpp.obj	b7f259d8e1329313
+2881	3201	7914007101424934	testCase.exe	2bdd1ee4d487a897

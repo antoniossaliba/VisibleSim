@@ -1,5 +1,5 @@
-#ifndef testCaseCode_H_
-#define testCaseCode_H_
+#ifndef TESTCASECODE_H_
+#define TESTCASECODE_H_
 
 #include "robots/slidingCubes/slidingCubesSimulator.h"
 #include "robots/slidingCubes/slidingCubesWorld.h"
@@ -12,7 +12,7 @@ static const int ONPATH_MSG_ID = 1004;
 
 using namespace SlidingCubes;
 
-class ComeBackCode : public SlidingCubesBlockCode {
+class TestCaseCode : public SlidingCubesBlockCode {
 private:
 	SlidingCubesBlock *module = nullptr;
     int distance;
@@ -21,8 +21,8 @@ private:
     bool isWall = false;
     bool isPath = false;
 public :
-	ComeBackCode(SlidingCubesBlock *host);
-	~ComeBackCode() {};
+	TestCaseCode(SlidingCubesBlock *host);
+	~TestCaseCode() {};
 
 /**
   * This function is called on startup of the blockCode, it can be used to perform initial
@@ -36,28 +36,28 @@ public :
   * @param _msg Pointer to the message received by the module, requires casting
   * @param sender Connector of the module that has received the message and that is connected to the sender
   */
-   void mySendDistanceFunc(std::shared_ptr<Message>_msg,P2PNetworkInterface *sender);
+   void mySendDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface *sender);
 
 /**
   * @brief Message handler for the message 'answerDistance'
   * @param _msg Pointer to the message received by the module, requires casting
   * @param sender Connector of the module that has received the message and that is connected to the sender
   */
-   void myAnswerDistanceFunc(std::shared_ptr<Message>_msg,P2PNetworkInterface *sender);
+   void myAnswerDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface *sender);
 
 /**
   * @brief Message handler for the message 'askDistance'
   * @param _msg Pointer to the message received by the module, requires casting
   * @param sender Connector of the module that has received the message and that is connected to the sender
   */
-   void myAskDistanceFunc(std::shared_ptr<Message>_msg,P2PNetworkInterface *sender);
+   void myAskDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface *sender);
 
 /**
   * @brief Message handler for the message 'onPath'
   * @param _msg Pointer to the message received by the module, requires casting
   * @param sender Connector of the module that has received the message and that is connected to the sender
   */
-   void myOnPathFunc(std::shared_ptr<Message>_msg,P2PNetworkInterface *sender);
+   void myOnPathFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface *sender);
 
     void parseUserBlockElements(TiXmlElement *blockElt) override;
 /**
@@ -69,9 +69,9 @@ public :
 /*****************************************************************************/
 /** needed to associate code to module                                      **/
 	static BlockCode *buildNewBlockCode(BuildingBlock *host) {
-	    return(new ComeBackCode((SlidingCubesBlock*)host));
+	    return(new TestCaseCode((SlidingCubesBlock*)host));
 	};
 /*****************************************************************************/
 };
 
-#endif /* comeBackCode_H_ */
+#endif /* TESTCASECODE_H_ */

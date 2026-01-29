@@ -1,33 +1,33 @@
 #include "testCaseCode.hpp"
 
-ComeBackCode::ComeBackCode(SlidingCubesBlock *host):SlidingCubesBlockCode(host),module(host) {
+TestCaseCode::TestCaseCode(SlidingCubesBlock *host):SlidingCubesBlockCode(host),module(host) {
     // @warning Do not remove block below, as a blockcode with a NULL host might be created
     //  for command line parsing
     if (not host) return;
 
     // Registers a callback (mySendDistanceFunc) to the message of type E
     addMessageEventFunc2(SENDDISTANCE_MSG_ID,
-                       std::bind(&ComeBackCode::mySendDistanceFunc,this,
+                       std::bind(&TestCaseCode::mySendDistanceFunc,this,
                        std::placeholders::_1, std::placeholders::_2));
 
     // Registers a callback (myAnswerDistanceFunc) to the message of type S
     addMessageEventFunc2(ANSWERDISTANCE_MSG_ID,
-                       std::bind(&ComeBackCode::myAnswerDistanceFunc,this,
+                       std::bind(&TestCaseCode::myAnswerDistanceFunc,this,
                        std::placeholders::_1, std::placeholders::_2));
 
     // Registers a callback (myAskDistanceFunc) to the message of type D
     addMessageEventFunc2(ASKDISTANCE_MSG_ID,
-                       std::bind(&ComeBackCode::myAskDistanceFunc,this,
+                       std::bind(&TestCaseCode::myAskDistanceFunc,this,
                        std::placeholders::_1, std::placeholders::_2));
 
     // Registers a callback (myOnPathFunc) to the message of type T
     addMessageEventFunc2(ONPATH_MSG_ID,
-                       std::bind(&ComeBackCode::myOnPathFunc,this,
+                       std::bind(&TestCaseCode::myOnPathFunc,this,
                        std::placeholders::_1, std::placeholders::_2));
 
 }
 
-void ComeBackCode::startup() {
+void TestCaseCode::startup() {
     console << "start " << module->blockId << "\n";
     if (module->blockId == 1) { // Master id is 1
         module->setColor(RED);
@@ -48,7 +48,7 @@ void ComeBackCode::startup() {
         module->setColor(LIGHTGREY);
     }
 }
-void ComeBackCode::mySendDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
+void TestCaseCode::mySendDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
 
     MessageOf<int>* msg = static_cast<MessageOf<int>*>(_msg.get());
     int d = *msg->getData();
@@ -65,7 +65,7 @@ void ComeBackCode::mySendDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkIn
 
 };
 
-void ComeBackCode::myAnswerDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
+void TestCaseCode::myAnswerDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
 
     MessageOf<int>* msg = static_cast<MessageOf<int>*>(_msg.get());
     int d = *msg->getData();
@@ -77,12 +77,12 @@ void ComeBackCode::myAnswerDistanceFunc(std::shared_ptr<Message>_msg, P2PNetwork
 
 };
 
-void ComeBackCode::myAskDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
+void TestCaseCode::myAskDistanceFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
     sendMessage("Answer Distance",new MessageOf<int>(ANSWERDISTANCE_MSG_ID,distance),sender,0,0);
 
 };
 
-void ComeBackCode::myOnPathFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
+void TestCaseCode::myOnPathFunc(std::shared_ptr<Message>_msg, P2PNetworkInterface*sender) {
     if(module->blockId != 1 && isWall == false)
     {
         module->setColor(BLUE);
@@ -91,14 +91,14 @@ void ComeBackCode::myOnPathFunc(std::shared_ptr<Message>_msg, P2PNetworkInterfac
 
 };
 
-void ComeBackCode::parseUserBlockElements(TiXmlElement *blockElt)
+void TestCaseCode::parseUserBlockElements(TiXmlElement *blockElt)
 {
     blockElt->QueryBoolAttribute("isTarget", &isTarget);
     blockElt->QueryBoolAttribute("isWall", &isWall);
     // (pour parsing cf.  simulatorCore/src/base/simulator.cpp)
 }
 
-void ComeBackCode::processLocalEvent(std::shared_ptr<Event> pev) {
+void TestCaseCode::processLocalEvent(std::shared_ptr<Event> pev) {
     std::shared_ptr<Message> message;
     stringstream info;
 
