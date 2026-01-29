@@ -12,9 +12,11 @@ C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/demoMotionsC3D.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/demoReconfC3D.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/myMotionTest.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/hexanodes_demo.dir
+C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/comeBack.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/myAppSC.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/demo01_SC.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/catoms3DRotate.dir
+C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/testCase.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/catomsCombination.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/e1_flooding.dir
 C:/Users/anton/VisibleSim/build-mingw64/CMakeFiles/e2_goback.dir

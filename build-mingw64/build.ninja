@@ -3528,6 +3528,56 @@ build hexanodes_demo.exe: CXX_EXECUTABLE_LINKER__hexanodes_demo_Release CMakeFil
   TARGET_SUPPORT_DIR = CMakeFiles\hexanodes_demo.dir
 
 # =============================================================================
+# Object build statements for EXECUTABLE target comeBack
+
+
+#############################################
+# Order-only phony target for comeBack
+
+build cmake_object_order_depends_target_comeBack: phony || cmake_object_order_depends_target_SlidingCubes
+
+build CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBack.cpp.obj: CXX_COMPILER__comeBack_unscanned_Release C$:/Users/anton/VisibleSim/applicationsSrc/comeBack/comeBack.cpp || cmake_object_order_depends_target_comeBack
+  CONFIG = Release
+  DEFINES = -DDEBUG_CONF_PARSING -DDEBUG_CSG -DUSE_FREEGLUT
+  DEP_FILE = CMakeFiles\comeBack.dir\applicationsSrc\comeBack\comeBack.cpp.obj.d
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/anton/VisibleSim/simulatorCore/src
+  OBJECT_DIR = CMakeFiles\comeBack.dir
+  OBJECT_FILE_DIR = CMakeFiles\comeBack.dir\applicationsSrc\comeBack
+  TARGET_SUPPORT_DIR = CMakeFiles\comeBack.dir
+
+build CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBackCode.cpp.obj: CXX_COMPILER__comeBack_unscanned_Release C$:/Users/anton/VisibleSim/applicationsSrc/comeBack/comeBackCode.cpp || cmake_object_order_depends_target_comeBack
+  CONFIG = Release
+  DEFINES = -DDEBUG_CONF_PARSING -DDEBUG_CSG -DUSE_FREEGLUT
+  DEP_FILE = CMakeFiles\comeBack.dir\applicationsSrc\comeBack\comeBackCode.cpp.obj.d
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/anton/VisibleSim/simulatorCore/src
+  OBJECT_DIR = CMakeFiles\comeBack.dir
+  OBJECT_FILE_DIR = CMakeFiles\comeBack.dir\applicationsSrc\comeBack
+  TARGET_SUPPORT_DIR = CMakeFiles\comeBack.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target comeBack
+
+
+#############################################
+# Link the executable comeBack.exe
+
+build comeBack.exe: CXX_EXECUTABLE_LINKER__comeBack_Release CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBack.cpp.obj CMakeFiles/comeBack.dir/applicationsSrc/comeBack/comeBackCode.cpp.obj | C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a || C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a
+  CONFIG = Release
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG
+  LINK_LIBRARIES = C:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a  -lfreeglut  -lmuparser  -lOpenGL32  -lglu32  -lglew32  -lwinpthread  -lmuparser  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LC:/Users/anton/VisibleSim/./simulatorCore/lib
+  OBJECT_DIR = CMakeFiles\comeBack.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = comeBack.exe
+  TARGET_IMPLIB = C:\Users\anton\VisibleSim\simulatorCore\lib\libcomeBack.dll.a
+  TARGET_PDB = comeBack.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\comeBack.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target myAppSC
 
 
@@ -3676,6 +3726,56 @@ build catoms3DRotate.exe: CXX_EXECUTABLE_LINKER__catoms3DRotate_Release CMakeFil
   TARGET_IMPLIB = C:\Users\anton\VisibleSim\simulatorCore\lib\libcatoms3DRotate.dll.a
   TARGET_PDB = catoms3DRotate.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\catoms3DRotate.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target testCase
+
+
+#############################################
+# Order-only phony target for testCase
+
+build cmake_object_order_depends_target_testCase: phony || cmake_object_order_depends_target_SlidingCubes
+
+build CMakeFiles/testCase.dir/applicationsSrc/testCase/testCase.cpp.obj: CXX_COMPILER__testCase_unscanned_Release C$:/Users/anton/VisibleSim/applicationsSrc/testCase/testCase.cpp || cmake_object_order_depends_target_testCase
+  CONFIG = Release
+  DEFINES = -DDEBUG_CONF_PARSING -DDEBUG_CSG -DUSE_FREEGLUT
+  DEP_FILE = CMakeFiles\testCase.dir\applicationsSrc\testCase\testCase.cpp.obj.d
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/anton/VisibleSim/simulatorCore/src
+  OBJECT_DIR = CMakeFiles\testCase.dir
+  OBJECT_FILE_DIR = CMakeFiles\testCase.dir\applicationsSrc\testCase
+  TARGET_SUPPORT_DIR = CMakeFiles\testCase.dir
+
+build CMakeFiles/testCase.dir/applicationsSrc/testCase/testCaseCode.cpp.obj: CXX_COMPILER__testCase_unscanned_Release C$:/Users/anton/VisibleSim/applicationsSrc/testCase/testCaseCode.cpp || cmake_object_order_depends_target_testCase
+  CONFIG = Release
+  DEFINES = -DDEBUG_CONF_PARSING -DDEBUG_CSG -DUSE_FREEGLUT
+  DEP_FILE = CMakeFiles\testCase.dir\applicationsSrc\testCase\testCaseCode.cpp.obj.d
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -IC:/Users/anton/VisibleSim/simulatorCore/src
+  OBJECT_DIR = CMakeFiles\testCase.dir
+  OBJECT_FILE_DIR = CMakeFiles\testCase.dir\applicationsSrc\testCase
+  TARGET_SUPPORT_DIR = CMakeFiles\testCase.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target testCase
+
+
+#############################################
+# Link the executable testCase.exe
+
+build testCase.exe: CXX_EXECUTABLE_LINKER__testCase_Release CMakeFiles/testCase.dir/applicationsSrc/testCase/testCase.cpp.obj CMakeFiles/testCase.dir/applicationsSrc/testCase/testCaseCode.cpp.obj | C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a || C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a
+  CONFIG = Release
+  FLAGS = -Wno-long-long -Wpedantic -O3 -DNDEBUG
+  LINK_LIBRARIES = C:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a  -lfreeglut  -lmuparser  -lOpenGL32  -lglu32  -lglew32  -lwinpthread  -lmuparser  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LC:/Users/anton/VisibleSim/./simulatorCore/lib
+  OBJECT_DIR = CMakeFiles\testCase.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = testCase.exe
+  TARGET_IMPLIB = C:\Users\anton\VisibleSim\simulatorCore\lib\libtestCase.dll.a
+  TARGET_PDB = testCase.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\testCase.dir
 
 # =============================================================================
 # Object build statements for EXECUTABLE target catomsCombination
@@ -4177,6 +4277,8 @@ build catoms3DRotate: phony catoms3DRotate.exe
 
 build catomsCombination: phony catomsCombination.exe
 
+build comeBack: phony comeBack.exe
+
 build demo01_SC: phony demo01_SC.exe
 
 build demoMotionsC3D: phony demoMotionsC3D.exe
@@ -4215,6 +4317,8 @@ build simpleColorSB: phony simpleColorSB.exe
 
 build stressTestSB: phony stressTestSB.exe
 
+build testCase: phony testCase.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -4223,7 +4327,7 @@ build stressTestSB: phony stressTestSB.exe
 #############################################
 # Folder: C:/Users/anton/VisibleSim/build-mingw64
 
-build all: phony C$:/Users/anton/VisibleSim/simulatorCore/lib/libBlinkyBlocks.a libCatoms3D.dll C$:/Users/anton/VisibleSim/simulatorCore/lib/libSmartBlocks.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libHexanodes.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libDatoms.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a stressTestSB.exe simpleColorBB.exe simpleColorSB.exe ants.exe demoMotionsC3D.exe demoReconfC3D.exe myMotionTest.exe hexanodes_demo.exe myAppSC.exe demo01_SC.exe catoms3DRotate.exe catomsCombination.exe e1_flooding.exe e2_goback.exe e3_lightpath.exe borders.exe myAppMotionSC.exe myCSGappBB.exe BBbalance.exe
+build all: phony C$:/Users/anton/VisibleSim/simulatorCore/lib/libBlinkyBlocks.a libCatoms3D.dll C$:/Users/anton/VisibleSim/simulatorCore/lib/libSmartBlocks.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libHexanodes.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libDatoms.a C$:/Users/anton/VisibleSim/simulatorCore/lib/libSlidingCubes.a stressTestSB.exe simpleColorBB.exe simpleColorSB.exe ants.exe demoMotionsC3D.exe demoReconfC3D.exe myMotionTest.exe hexanodes_demo.exe comeBack.exe myAppSC.exe demo01_SC.exe catoms3DRotate.exe testCase.exe catomsCombination.exe e1_flooding.exe e2_goback.exe e3_lightpath.exe borders.exe myAppMotionSC.exe myCSGappBB.exe BBbalance.exe
 
 # =============================================================================
 # Built-in targets

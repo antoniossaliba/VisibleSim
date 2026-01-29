@@ -7,7 +7,7 @@
   <!-- This configures a moving pattern -->
 
 		<block position="0,5,0"/>
-    		<block position="0,5,1" isWall="true"/>
+    	<block position="0,5,1" isWall="true"/>
 		<block position="0,5,2" isWall="true"/>
 		<block position="0,5,3" isWall="true"/>
 		<block position="0,5,4" isWall="true"/>

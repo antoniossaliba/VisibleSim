@@ -572,15 +572,24 @@ add_library(SlidingCubes STATIC ${COMMON_SRC_FILES}
         )
 target_link_libraries(SlidingCubes -lOpenGL32 -lglu32 -lglew32 -lfreeglut -lwinpthread -lmuparser)
 
-add_executable(stressTestSB applicationsSrc/stressTestSB/stressTestSB.cpp applicationsSrc/stressTestSB/stressTestSBBlockCode.cpp)
+add_executable(stressTestSB 
+                applicationsSrc/stressTestSB/stressTestSB.cpp 
+                applicationsSrc/stressTestSB/stressTestSBBlockCode.cpp
+)
 target_link_libraries(stressTestSB SmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS stressTestSB RUNTIME DESTINATION ../applicationsBin/stressTestSB)
 
-add_executable(simpleColorBB applicationsSrc/simpleColorBB/simpleColorBB.cpp applicationsSrc/simpleColorBB/simpleColorCodeBB.cpp)
+add_executable(simpleColorBB 
+                applicationsSrc/simpleColorBB/simpleColorBB.cpp 
+                applicationsSrc/simpleColorBB/simpleColorCodeBB.cpp
+)
 target_link_libraries(simpleColorBB BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS simpleColorBB RUNTIME DESTINATION applicationsBin/simpleColorBB)
 
-add_executable(simpleColorSB applicationsSrc/simpleColorSB/simpleColorSB.cpp applicationsSrc/simpleColorSB/simpleColorCodeSB.cpp)
+add_executable(simpleColorSB 
+                applicationsSrc/simpleColorSB/simpleColorSB.cpp 
+                applicationsSrc/simpleColorSB/simpleColorCodeSB.cpp
+)
 target_link_libraries(simpleColorSB SmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS simpleColorSB RUNTIME DESTINATION applicationsBin/simpleColorSB)
 
@@ -604,21 +613,40 @@ else ()
         message(WARNING "Skipping target 'myApp': sources not found in applicationsSrc/myApp")
 endif ()
 
-add_executable(demoMotionsC3D applicationsSrc/demoMotionsC3D/demoMotionsC3D.cpp applicationsSrc/demoMotionsC3D/demoMotionsC3DCode.cpp)
+add_executable(demoMotionsC3D 
+                applicationsSrc/demoMotionsC3D/demoMotionsC3D.cpp 
+                applicationsSrc/demoMotionsC3D/demoMotionsC3DCode.cpp
+)
 target_link_libraries(demoMotionsC3D Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demoMotionsC3D RUNTIME DESTINATION applicationsBin/demoMotionsC3D)
 
-add_executable(demoReconfC3D applicationsSrc/demoReconfC3D/demoReconfC3D.cpp applicationsSrc/demoReconfC3D/demoReconfC3DCode.cpp)
+add_executable(demoReconfC3D 
+                applicationsSrc/demoReconfC3D/demoReconfC3D.cpp 
+                applicationsSrc/demoReconfC3D/demoReconfC3DCode.cpp
+)
 target_link_libraries(demoReconfC3D Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demoReconfC3D RUNTIME DESTINATION applicationsBin/demoReconfC3D)
 
-add_executable(myMotionTest applicationsSrc/myMotionTest/myMotionTest.cpp applicationsSrc/myMotionTest/myMotionTestCode.cpp)
+add_executable(myMotionTest 
+                applicationsSrc/myMotionTest/myMotionTest.cpp 
+                applicationsSrc/myMotionTest/myMotionTestCode.cpp
+)
 target_link_libraries(myMotionTest Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS myMotionTest RUNTIME DESTINATION applicationsBin/myMotionTest)
 
-add_executable(hexanodes_demo applicationsSrc/hexanodes_demo/hexanodesDemo.cpp applicationsSrc/hexanodes_demo/hexanodesDemoBlockCode.cpp)
+add_executable(hexanodes_demo 
+                applicationsSrc/hexanodes_demo/hexanodesDemo.cpp 
+                applicationsSrc/hexanodes_demo/hexanodesDemoBlockCode.cpp
+)
 target_link_libraries(hexanodes_demo Hexanodes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS hexanodes_demo RUNTIME DESTINATION applicationsBin/hexanodes_demo)
+
+add_executable(comeBack
+                applicationsSrc/comeBack/comeBack.cpp 
+                applicationsSrc/comeBack/comeBackCode.cpp
+)
+target_link_libraries(comeBack SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+install(TARGETS comeBack RUNTIME DESTINATION applicationsBin/comeBack)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/tmp/SnakeMove.cpp")
         add_executable(tmp applicationsSrc/tmp/SnakeMove.cpp applicationsSrc/tmp/SnakeMoveCode.cpp)
@@ -628,7 +656,11 @@ else ()
         message(WARNING "Skipping target 'tmp': sources not found in applicationsSrc/tmp")
 endif ()
 
-add_executable(myAppSC applicationsSrc/myAppSC/myAppSC.cpp applicationsSrc/myAppSC/myAppSCCode.cpp applicationsSrc/myAppSC/myAppSCCode.hpp)
+add_executable(myAppSC 
+                applicationsSrc/myAppSC/myAppSC.cpp 
+                applicationsSrc/myAppSC/myAppSCCode.cpp 
+                applicationsSrc/myAppSC/myAppSCCode.hpp
+)
 target_link_libraries(myAppSC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS myAppSC RUNTIME DESTINATION applicationsBin/myAppSC)
 
@@ -636,23 +668,45 @@ add_executable(demo01_SC applicationsSrc/demo01_SC/demo01_SC.cpp applicationsSrc
 target_link_libraries(demo01_SC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demo01_SC RUNTIME DESTINATION applicationsBin/demo01_SC)
 
-add_executable(catoms3DRotate applicationsSrc/catoms3DRotate/catoms3DRotate.cpp applicationsSrc/catoms3DRotate/catoms3DRotateCode.cpp)
+add_executable(catoms3DRotate 
+                applicationsSrc/catoms3DRotate/catoms3DRotate.cpp 
+                applicationsSrc/catoms3DRotate/catoms3DRotateCode.cpp
+)
 target_link_libraries(catoms3DRotate Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS catoms3DRotate RUNTIME DESTINATION applicationsBin/catoms3DRotate)
 
-add_executable(catomsCombination applicationsSrc/catomsCombination/catomsCombination.cpp applicationsSrc/catomsCombination/catomsCombinationCode.cpp)
+add_executable(testCase
+                applicationsSrc/testCase/testCase.cpp 
+                applicationsSrc/testCase/testCaseCode.cpp
+)
+target_link_libraries(testCase SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+install(TARGETS testCase RUNTIME DESTINATION applicationsBin/testCase)
+
+add_executable(catomsCombination 
+                applicationsSrc/catomsCombination/catomsCombination.cpp 
+                applicationsSrc/catomsCombination/catomsCombinationCode.cpp
+)
 target_link_libraries(catomsCombination Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS catomsCombination RUNTIME DESTINATION applicationsBin/catomsCombination)
 
-add_executable(e1_flooding applicationsSrc/e1_flooding/e1_flooding.cpp applicationsSrc/e1_flooding/e1_floodingCode.cpp)
+add_executable(e1_flooding 
+                applicationsSrc/e1_flooding/e1_flooding.cpp 
+                applicationsSrc/e1_flooding/e1_floodingCode.cpp
+)
 target_link_libraries(e1_flooding BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e1_flooding RUNTIME DESTINATION applicationsBin/e1_flooding)
 
-add_executable(e2_goback applicationsSrc/e2_goback/e2_goback.cpp applicationsSrc/e2_goback/e2_gobackCode.cpp)
+add_executable(e2_goback 
+                applicationsSrc/e2_goback/e2_goback.cpp 
+                applicationsSrc/e2_goback/e2_gobackCode.cpp
+)
 target_link_libraries(e2_goback BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e2_goback RUNTIME DESTINATION applicationsBin/e2_goback)
 
-add_executable(e3_lightpath applicationsSrc/e3_lightpath/e3_lightpath.cpp applicationsSrc/e3_lightpath/e3_lightpathCode.cpp)
+add_executable(e3_lightpath 
+                applicationsSrc/e3_lightpath/e3_lightpath.cpp 
+                applicationsSrc/e3_lightpath/e3_lightpathCode.cpp
+)
 target_link_libraries(e3_lightpath BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e3_lightpath RUNTIME DESTINATION applicationsBin/e3_lightpath)
 
@@ -667,14 +721,20 @@ endif ()
 # Generated by VisibleSim BlockCode Generator
 # https://services-stgi.pu-pm.univ-fcomte.fr/visiblesim/generator.php
 # 2022-10-13
-add_executable(borders applicationsSrc/borders/borders.cpp applicationsSrc/borders/bordersCode.cpp)
+add_executable(borders 
+                applicationsSrc/borders/borders.cpp 
+                applicationsSrc/borders/bordersCode.cpp
+)
 target_link_libraries(borders BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
 install(TARGETS borders RUNTIME DESTINATION applicationsBin/borders)
 
 # Generated by VisibleSim BlockCode Generator
 # https://services-stgi.pu-pm.univ-fcomte.fr/visiblesim/generator.php
 # 2023-02-10
-add_executable(myAppMotionSC applicationsSrc/myAppMotionSC/myAppMotionSC.cpp applicationsSrc/myAppMotionSC/myAppMotionSCCode.cpp)
+add_executable(myAppMotionSC 
+                applicationsSrc/myAppMotionSC/myAppMotionSC.cpp 
+                applicationsSrc/myAppMotionSC/myAppMotionSCCode.cpp
+)
 target_link_libraries(myAppMotionSC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
 install(TARGETS myAppMotionSC RUNTIME DESTINATION applicationsBin/myAppMotionSC)
 
