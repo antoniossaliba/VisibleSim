@@ -1,0 +1,20 @@
+{
+    "-c <config>": "Specify the configuration file to use (default: config.xml)",
+    "-h": "Show help and exit",
+    "-f": "Fullscreen mode",
+    "-r": "Start in realtime scheduler mode (simulation time follows real elapsed time)",
+    "-R": "Start in fastest scheduler mode (run events as fast as possible)",
+    "-x": "Auto-terminate when the scheduler ends (no effect in terminal-only mode)",
+    "-t": "Terminal-only mode (no GUI / no OpenGL window)",
+    "-s <maxDate>": "Run scheduler in bounded-time mode: stop when event list is empty OR when simulation time reaches <maxDate> (microseconds)",
+    "-s inf": "Infinite duration: only stops when you press Q (in GUI)",
+    "-k <type>": "Force module type for “generic” blockcode execution. Options: {BB, RB, SB, C2D, C3D, MR}",
+    "-g": "Enable regression testing (exports terminal configuration)",
+    "-l": "Enable log output to simulation.log (only if built with LOGFILE enabled)",
+    "-i": "Enable more detailed simulation stats",
+    "-a <seed>": "Set the simulation random seed",
+    "-e": "Export final configuration when the simulation finishes",
+    "--replay [filename]": "Enable replay export; optional filename sets the output replay file name",
+    "--debug-replay": "Enable replay export and also create a text debug file for the replay",
+    "--replay-min-delay <delay>": "Minimum delay (microseconds) between two replay keyframes (advanced)"
+}
