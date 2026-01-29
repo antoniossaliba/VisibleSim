@@ -25,17 +25,9 @@
 const int SLIDING_WINDOW_STANDARD_WIDTH = 400;
 const int SLIDING_WINDOW_LARGE_WIDTH = 600;
 
-#ifdef WIN32
-const string helpDirectory = string(ROOT_DIR) + "/simulatorCore/resources/help/";
-#else
 const string helpDirectory = "../../simulatorCore/resources/help/";
-#endif
 
-#ifdef WIN32
-const string UiTexturesDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/UITextures/";
-#else
 const string UiTexturesDirectory = "../../simulatorCore/resources/textures/UITextures/";
-#endif
 
 
 GlutWindow::GlutWindow(GlutWindow *parent, GLuint pid, GLint px, GLint py,

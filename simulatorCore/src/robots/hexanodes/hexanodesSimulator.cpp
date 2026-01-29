@@ -21,11 +21,7 @@ using namespace BaseSimulator::utils;
 
 namespace Hexanodes {
 
-#ifdef WIN32
-    string textureDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/";
-#else
     string textureDirectory = "../../simulatorCore/resources/textures/";
-#endif
 void HexanodesSimulator::help() {
     cerr << "VisibleSim:" << endl;
     cerr << "Hexanodes" << endl;

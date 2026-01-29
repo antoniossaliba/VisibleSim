@@ -19,11 +19,7 @@ HexanodesGlBlock::HexanodesGlBlock(bID id):GlBlock(id), displayedValue(id) {
 
 void HexanodesGlBlock::glDraw(ObjLoader::ObjLoader *ptrObj) {
     static GLint lx,ly;
-#ifdef WIN32
-    static GLint idTextureDigits = loadTexture((string(ROOT_DIR) + "/simulatorCore/resources/textures/smartBlocksTextures/digits.tga").c_str(),lx,ly);
-#else
     static GLint idTextureDigits = loadTexture("../../simulatorCore/resources/textures/smartBlocksTextures/digits.tga",lx,ly);
-#endif
     glPushMatrix();
     mat.glMultMatrix();
     if (highlighted) {

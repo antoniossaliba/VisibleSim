@@ -5,13 +5,7 @@ namespace SmartBlocks {
 
     void SmartBlocksGlBlock::glDraw(ObjLoader::ObjLoader *ptrObj) {
         static GLint lx, ly;
-#ifdef WIN32
-        static GLint idTextureDigits = loadTexture(
-                (string(ROOT_DIR) + "/simulatorCore/resources/textures/smartBlocksTextures/digits.tga").c_str(), lx,
-                ly);
-#else
         static GLint idTextureDigits = loadTexture("../../simulatorCore/resources/textures/smartBlocksTextures/digits.tga",lx,ly);
-#endif
 
         glPushMatrix();
         glTranslatef(position[0] + 12.5, position[1] + 12.5, position[2]);

@@ -128,10 +128,9 @@ void StressTestSBBlockCode::processLocalEvent(std::shared_ptr<Event> pev) {
         }
 
         case EVENT_INTERRUPTION: {
-            std::shared_ptr<InterruptionEvent> itev =
-                std::static_pointer_cast<InterruptionEvent>(pev);
+            auto itev = std::static_pointer_cast<InterruptionEvent<int>>(pev);
 
-            switch(itev->mode) {
+            switch(itev->data) {
                 case AGITATE_IT_ID:
                     //console << " agitate" << "\n";
                     if (!isMoving && nbUnmarked>0) {

@@ -27,11 +27,7 @@
 #include "../gui/objLoader.h"
 #include "../replay/replayTags.h"
 
-#ifdef WIN32
-const string textureDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/";
-#else
 const string textureDirectory = "../../simulatorCore/resources/textures/";
-#endif
 
 const string menuTextureDirectory = textureDirectory + "menuTextures/";
 

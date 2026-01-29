@@ -47,11 +47,7 @@ namespace Catoms3D {
     void Catoms3DSimulator::loadWorld(const Cell3DPosition &gridSize, const Vector3D &gridScale,
                                       int argc, char *argv[]) {
         world = new Catoms3DWorld(gridSize, gridScale, argc, argv);
-#ifdef WIN32
-        string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/latticeTextures";
-#else
         string directory = "../../simulatorCore/resources/textures/latticeTextures";
-#endif
         if (GlutContext::GUIisEnabled)
             world->loadTextures(directory);
 

@@ -1,14 +1,14 @@
 #ifndef CatomsCombinationCode_H_
 #define CatomsCombinationCode_H_
 #include <algorithm>
+#include <limits>
+#include <vector>
 #include "robots/catoms3D/catoms3DSimulator.h"
 #include "robots/catoms3D/catoms3DBlockCode.h"
 #include "robots/catoms3D/catoms3DMotionEngine.h"
 #include "motion/teleportationEvents.h"
 
 using namespace Catoms3D;
-
-const int confSize=3;
 
 class Solution {
 public:
@@ -20,20 +20,28 @@ public:
 
 class ModuleConfig {
 public:
-    array<Cell3DPosition,confSize> pos;
+    std::vector<Cell3DPosition> pos;
     //uint8_t orientCode;
     //bool isConnected;
 //    ModuleData(uint16_t _id, Cell3DPosition _pos, uint8_t _orientCode,bool _hm):id(_id),pos(_pos),orientCode(_orientCode),hasMoved(_hm) {};
     //ModuleData(Cell3DPosition _pos),pos(_pos) {};
 
-    ModuleConfig() {
-        for (auto &p:pos) {
-            p.set(numeric_limits<short>::max(),numeric_limits<short>::max(),numeric_limits<short>::max());
+    ModuleConfig() = default;
+    explicit ModuleConfig(size_t n) {
+        pos.resize(n);
+        for (auto &p : pos) {
+            p.set(std::numeric_limits<short>::max(), std::numeric_limits<short>::max(),
+                  std::numeric_limits<short>::max());
         }
-    };
-    void set(uint8_t i,Cell3DPosition p) { pos[i]=p; };
+    }
+    void set(uint8_t i, Cell3DPosition p) {
+        if (pos.size() <= i) {
+            pos.resize(i + 1);
+        }
+        pos[i] = p;
+    }
     void sortPositions() {
-        sort(pos.begin(),pos.end(),[](Cell3DPosition &n1,Cell3DPosition &n2) { return n1<n2; });
+        sort(pos.begin(), pos.end(), [](Cell3DPosition &n1, Cell3DPosition &n2) { return n1 < n2; });
     };
     bool operator==(const ModuleConfig& other);
     bool reachedTarget(const Target &target) {

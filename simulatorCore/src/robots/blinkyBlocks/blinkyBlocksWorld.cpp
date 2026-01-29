@@ -21,11 +21,7 @@ using namespace std;
 
 namespace BlinkyBlocks {
 
-#ifdef WIN32
-    string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/blinkyBlocksTextures";
-#else
     string directory = "../../simulatorCore/resources/textures/blinkyBlocksTextures";
-#endif
 
     BlinkyBlocksWorld::BlinkyBlocksWorld(const Cell3DPosition &gridSize, const Vector3D &gridScale,
                                          int argc, char *argv[]):World(argc, argv) {
@@ -35,11 +31,7 @@ namespace BlinkyBlocks {
             objBlock = new ObjLoader::ObjLoader(directory.c_str(),"blinkyBlock_texture.obj");
             //objBlock = new ObjLoader::ObjLoader(directory.c_str(),"blinkyBlockCentered.obj");
             objBlockForPicking = new ObjLoader::ObjLoader(directory.c_str(),"blinkyBlockPickingCentered.obj");
-#ifdef WIN32
-            directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/latticeTextures";
-#else
             directory = "../../simulatorCore/resources/textures/latticeTextures";
-#endif
             objRepere = new ObjLoader::ObjLoader(directory.c_str(),"repere25.obj");
         }
         lattice = new SCLattice(gridSize, gridScale.isZero() ? defaultBlockSize : gridScale);

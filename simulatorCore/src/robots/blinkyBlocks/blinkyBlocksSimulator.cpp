@@ -15,11 +15,8 @@ using namespace std;
 
 namespace BlinkyBlocks {
 
-#ifdef WIN32
-    string textureDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/";
-#else
     string textureDirectory = "../../simulatorCore/resources/textures/";
-#endif
+
 
 
     BlinkyBlocksSimulator::BlinkyBlocksSimulator(int argc, char *argv[], BlockCodeBuilder bcb)

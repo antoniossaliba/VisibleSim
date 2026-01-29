@@ -114,14 +114,8 @@ void GlutContext::init(int argc, char **argv) {
         glutSpecialFunc(specialFunc);
         glutIdleFunc(idleFunc);
 
-#ifdef WIN32
-        mainWindow = new GlutSlidingMainWindow(screenWidth - 40, 60, 40, screenHeight - 60,
-                                               (string(ROOT_DIR) +
-                                                "/simulatorCore/resources/textures/UITextures/fenetre_onglet.tga").c_str());
-#else
-        mainWindow = new GlutSlidingMainWindow(screenWidth-40,60,40,screenHeight-60,
-                                               "../../simulatorCore/resources/textures/UITextures/fenetre_onglet.tga");
-#endif
+    mainWindow = new GlutSlidingMainWindow(screenWidth-40,60,40,screenHeight-60,
+                           "../../simulatorCore/resources/textures/UITextures/fenetre_onglet.tga");
         // debugWindow = new GlutSlidingDebugWindow(screenWidth-40,60,40,screenHeight-60,
         //                                       "../../simulatorCore/resources/textures/UITextures/fenetre_ongletDBG.tga");
         popup = new GlutPopupWindow(nullptr, 0, 0, 180, 30);

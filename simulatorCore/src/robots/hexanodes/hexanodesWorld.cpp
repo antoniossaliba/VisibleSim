@@ -29,11 +29,7 @@ using namespace BaseSimulator::utils;
 
 //! \namespace Hexanodes
 namespace Hexanodes {
-#ifdef WIN32
-    string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/hexanodesTextures";
-#else
     string directory = "../../simulatorCore/resources/textures/hexanodesTextures";
-#endif
 
 /**
    \brief Constructor

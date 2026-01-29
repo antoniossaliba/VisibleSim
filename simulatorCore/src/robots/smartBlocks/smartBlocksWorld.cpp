@@ -27,18 +27,10 @@ namespace SmartBlocks {
     idTextureFloor=0;
     if (GlutContext::GUIisEnabled) {
         string directory;
-#ifdef WIN32
-        directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/smartBlocksTextures";
-#else
         directory = "../../simulatorCore/resources/textures/smartBlocksTextures";
-#endif
         objBlock = new ObjLoader::ObjLoader(directory.c_str(),"smartBlockSimple.obj");
         objBlockForPicking = new ObjLoader::ObjLoader(directory.c_str(),"smartBlockPicking.obj");
-#ifdef WIN32
-        directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/latticeTextures";
-#else
         directory = "../../simulatorCore/resources/textures/latticeTextures";
-#endif
         objRepere = new ObjLoader::ObjLoader(directory.c_str(),"repere25.obj");
     }
 

@@ -112,10 +112,14 @@ void Node::config(ostream &os) {
 
 /** @warning arrays must be sorted **/
 bool ModuleConfig::operator==(const ModuleConfig &other) {
-    int i = 0;
-    /* position equal only */
-    while (i < confSize && pos[i] == other.pos[i]) { i++; }
-    return i == confSize;
+    if (pos.size() != other.pos.size()) {
+        return false;
+    }
+    size_t i = 0;
+    while (i < pos.size() && pos[i] == other.pos[i]) {
+        i++;
+    }
+    return i == pos.size();
 }
 
 /** @warning arrays must be sorted **/
@@ -184,15 +188,16 @@ bool CatomsCombinationCode::addConfigurationFromMotion(uint32_t level, map<bID, 
     // create new array
     vector<pair<Cell3DPosition, Cell3DPosition>> mobilePositions;
     ModuleConfig config;
-    auto it = modules.begin();
-    for (int i = 0; i < confSize && it != modules.end(); i++) {
-        bool isMobile = ((*it).second->position == mobile->position);
-        config.set(i, isMobile ? targetPos : (*it).second->position);
-        if (isMobile) {
-            //cout << "add (" << (*it).second->position << "," << targetPos << ")" << endl;
-            mobilePositions.push_back({(*it).second->position, targetPos});
+    for (auto &m : modules) {
+        auto *code = static_cast<CatomsCombinationCode *>(m.second->blockCode);
+        if (!code->isMobile) {
+            continue;
         }
-        it++;
+        const bool moved = (m.second == mobile);
+        config.pos.push_back(moved ? targetPos : m.second->position);
+        if (moved) {
+            mobilePositions.push_back({m.second->position, targetPos});
+        }
     }
     Node newNode(level, config, parent, mobilePositions);
     // sort array for comparisons
@@ -299,16 +304,12 @@ void CatomsCombinationCode::worldRun() {
     // create new array
     vector<pair<Cell3DPosition, Cell3DPosition>> mobilePositions;
     ModuleConfig config;
-    auto it = modules.begin();
-    int i = 0;
-    while (it != modules.end()) {
-        auto isMobile = static_cast<CatomsCombinationCode *>((*it).second->blockCode)->isMobile;
-        cout << (*it).second->blockId << ":" << (*it).second->position << ", mob:" << isMobile << endl;
+    for (auto &m : modules) {
+        auto isMobile = static_cast<CatomsCombinationCode *>(m.second->blockCode)->isMobile;
+        cout << m.second->blockId << ":" << m.second->position << ", mob:" << isMobile << endl;
         if (isMobile) {
-            config.set(i++, (*it).second->position);
-//            mobilePositions.push_back({(*it).second->position,(*it).second->position});
+            config.pos.push_back(m.second->position);
         }
-        it++;
     }
     Node newNode(0, config, 0, mobilePositions);
     // sort array for comparisons

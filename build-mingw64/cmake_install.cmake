@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim
+# Install script for directory: C:/Users/anton/VisibleSim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Realease")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/../applicationsBin/stressTestSB" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/stressTestSB.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/../applicationsBin/stressTestSB" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/stressTestSB.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/../applicationsBin/stressTestSB/stressTestSB.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/../applicationsBin/stressTestSB/stressTestSB.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -48,7 +48,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorBB" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/simpleColorBB.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorBB" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/simpleColorBB.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorBB/simpleColorBB.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorBB/simpleColorBB.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -58,7 +58,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorSB" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/simpleColorSB.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorSB" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/simpleColorSB.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorSB/simpleColorSB.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/simpleColorSB/simpleColorSB.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -68,7 +68,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/rainbow" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/ants.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/rainbow" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/ants.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/rainbow/ants.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/rainbow/ants.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -78,7 +78,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demoMotionsC3D" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/demoMotionsC3D.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demoMotionsC3D" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/demoMotionsC3D.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demoMotionsC3D/demoMotionsC3D.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demoMotionsC3D/demoMotionsC3D.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -88,7 +88,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demoReconfC3D" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/demoReconfC3D.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demoReconfC3D" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/demoReconfC3D.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demoReconfC3D/demoReconfC3D.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demoReconfC3D/demoReconfC3D.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -98,7 +98,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myMotionTest" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/myMotionTest.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myMotionTest" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/myMotionTest.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myMotionTest/myMotionTest.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myMotionTest/myMotionTest.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -108,7 +108,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/hexanodes_demo" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/hexanodes_demo.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/hexanodes_demo" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/hexanodes_demo.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/hexanodes_demo/hexanodes_demo.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/hexanodes_demo/hexanodes_demo.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -118,7 +118,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppSC" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/myAppSC.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppSC" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/myAppSC.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppSC/myAppSC.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppSC/myAppSC.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -128,7 +128,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demo01_SC" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/demo01_SC.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/demo01_SC" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/demo01_SC.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demo01_SC/demo01_SC.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/demo01_SC/demo01_SC.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -138,7 +138,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/catoms3DRotate" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/catoms3DRotate.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/catoms3DRotate" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/catoms3DRotate.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/catoms3DRotate/catoms3DRotate.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/catoms3DRotate/catoms3DRotate.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -148,7 +148,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/catomsCombination" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/catomsCombination.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/catomsCombination" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/catomsCombination.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/catomsCombination/catomsCombination.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/catomsCombination/catomsCombination.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -158,7 +158,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e1_flooding" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/e1_flooding.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e1_flooding" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/e1_flooding.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e1_flooding/e1_flooding.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e1_flooding/e1_flooding.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -168,7 +168,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e2_goback" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/e2_goback.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e2_goback" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/e2_goback.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e2_goback/e2_goback.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e2_goback/e2_goback.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -178,7 +178,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e3_lightpath" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/e3_lightpath.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/e3_lightpath" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/e3_lightpath.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e3_lightpath/e3_lightpath.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/e3_lightpath/e3_lightpath.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -188,7 +188,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/borders" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/borders.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/borders" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/borders.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/borders/borders.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/borders/borders.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -198,7 +198,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppMotionSC" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/myAppMotionSC.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppMotionSC" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/myAppMotionSC.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppMotionSC/myAppMotionSC.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myAppMotionSC/myAppMotionSC.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -208,7 +208,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myCSGappBB" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/myCSGappBB.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/myCSGappBB" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/myCSGappBB.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myCSGappBB/myCSGappBB.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/myCSGappBB/myCSGappBB.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -218,7 +218,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/BBbalance" TYPE EXECUTABLE FILES "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/BBbalance.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/applicationsBin/BBbalance" TYPE EXECUTABLE FILES "C:/Users/anton/VisibleSim/build-mingw64/BBbalance.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/BBbalance/BBbalance.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/applicationsBin/BBbalance/BBbalance.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -230,7 +230,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/install_local_manifest.txt"
+  file(WRITE "C:/Users/anton/VisibleSim/build-mingw64/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -246,6 +246,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/anton/OneDrive/Desktop/Programmable Matter Simulation Project - LAU - UMLP/VisibleSim/build-mingw64/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/anton/VisibleSim/build-mingw64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

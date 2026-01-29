@@ -20,11 +20,7 @@
 using namespace std;
 //! \namespace SlidingCubes
 namespace SlidingCubes {
-#ifdef WIN32
-    string textureDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/";
-#else
     string textureDirectory = "../../simulatorCore/resources/textures/";
-#endif
 
 
     SlidingCubesWorld::SlidingCubesWorld(const Cell3DPosition &gridSize, const Vector3D &gridScale,

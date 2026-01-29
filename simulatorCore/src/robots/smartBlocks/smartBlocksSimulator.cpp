@@ -40,11 +40,7 @@ void SmartBlocksSimulator::loadWorld(const Cell3DPosition &gridSize, const Vecto
 
     if (GlutContext::GUIisEnabled) {
         string directory;
-#ifdef WIN32
-        directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/latticeTextures";
-#else
         directory = "../../simulatorCore/resources/textures/latticeTextures";
-#endif
         world->loadTextures(directory);
     }
     World::setWorld(world);

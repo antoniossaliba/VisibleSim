@@ -26,11 +26,7 @@ using namespace BaseSimulator::utils;
 //! \namespace Datoms
 namespace Datoms {
 
-#ifdef WIN32
-    string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/datomsTextures";
-#else
     string directory = "../../simulatorCore/resources/textures/datomsTextures";
-#endif
 /**
    \brief Constructor
    \param gridSize : size of the grid
@@ -47,11 +43,7 @@ DatomsWorld::DatomsWorld(const Cell3DPosition &gridSize, const Vector3D &gridSca
         //objBlock = new ObjLoader::ObjLoader(directory.c_str(),"datomsThick.obj");
         objBlock = new ObjLoader::ObjLoader(directory.c_str(),"datomVS_piston.obj");
         objBlockForPicking = new ObjLoader::ObjLoader(directory.c_str(), "datoms_picking.obj");
-#ifdef WIN32
-        string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/catoms3DTextures";
-#else
         string directory = "../../simulatorCore/resources/textures/catoms3DTextures";
-#endif
         objRepere = new ObjLoader::ObjLoader(directory.c_str(),"repereCatom3D.obj");
     }
 

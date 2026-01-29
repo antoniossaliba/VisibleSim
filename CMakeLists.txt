@@ -15,8 +15,6 @@ endif ()
 IF (WIN32)
     message(STATUS ">>> Win32")
     add_compile_definitions(USE_FREEGLUT)
-
-    add_compile_definitions("ROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}\"")
     message(STATUS "Installation dir:" ${CMAKE_CURRENT_SOURCE_DIR})
     #[[add_compile_definitions(DEBUG_GRAPHICS)]]
 
@@ -575,92 +573,92 @@ add_library(SlidingCubes STATIC ${COMMON_SRC_FILES}
 target_link_libraries(SlidingCubes -lOpenGL32 -lglu32 -lglew32 -lfreeglut -lwinpthread -lmuparser)
 
 add_executable(stressTestSB applicationsSrc/stressTestSB/stressTestSB.cpp applicationsSrc/stressTestSB/stressTestSBBlockCode.cpp)
-target_link_libraries(stressTestSB -lSmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(stressTestSB SmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS stressTestSB RUNTIME DESTINATION ../applicationsBin/stressTestSB)
 
 add_executable(simpleColorBB applicationsSrc/simpleColorBB/simpleColorBB.cpp applicationsSrc/simpleColorBB/simpleColorCodeBB.cpp)
-target_link_libraries(simpleColorBB -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(simpleColorBB BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS simpleColorBB RUNTIME DESTINATION applicationsBin/simpleColorBB)
 
 add_executable(simpleColorSB applicationsSrc/simpleColorSB/simpleColorSB.cpp applicationsSrc/simpleColorSB/simpleColorCodeSB.cpp)
-target_link_libraries(simpleColorSB -lSmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(simpleColorSB SmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS simpleColorSB RUNTIME DESTINATION applicationsBin/simpleColorSB)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/sudoku9x9/sudoku9x9.cpp")
         add_executable(sudoku9x9 applicationsSrc/sudoku9x9/sudoku9x9.cpp applicationsSrc/sudoku9x9/sudoku9x9Code.cpp)
-        target_link_libraries(sudoku9x9 -lSmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+                target_link_libraries(sudoku9x9 SmartBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
         install(TARGETS sudoku9x9 RUNTIME DESTINATION applicationsBin/sudoku9x9)
 else ()
         message(WARNING "Skipping target 'sudoku9x9': sources not found in applicationsSrc/sudoku9x9")
 endif ()
 
 add_executable(ants applicationsSrc/ants/ants.cpp applicationsSrc/ants/antsCode.cpp)
-target_link_libraries(ants -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(ants BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS ants RUNTIME DESTINATION applicationsBin/rainbow)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/myApp/myApp.cpp")
         add_executable(myApp applicationsSrc/myApp/myApp.cpp applicationsSrc/myApp/myAppCode.cpp)
-        target_link_libraries(myApp -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(myApp BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS myApp RUNTIME DESTINATION applicationsBin/myApp)
 else ()
         message(WARNING "Skipping target 'myApp': sources not found in applicationsSrc/myApp")
 endif ()
 
 add_executable(demoMotionsC3D applicationsSrc/demoMotionsC3D/demoMotionsC3D.cpp applicationsSrc/demoMotionsC3D/demoMotionsC3DCode.cpp)
-target_link_libraries(demoMotionsC3D -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(demoMotionsC3D Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demoMotionsC3D RUNTIME DESTINATION applicationsBin/demoMotionsC3D)
 
 add_executable(demoReconfC3D applicationsSrc/demoReconfC3D/demoReconfC3D.cpp applicationsSrc/demoReconfC3D/demoReconfC3DCode.cpp)
-target_link_libraries(demoReconfC3D -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(demoReconfC3D Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demoReconfC3D RUNTIME DESTINATION applicationsBin/demoReconfC3D)
 
 add_executable(myMotionTest applicationsSrc/myMotionTest/myMotionTest.cpp applicationsSrc/myMotionTest/myMotionTestCode.cpp)
-target_link_libraries(myMotionTest -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(myMotionTest Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS myMotionTest RUNTIME DESTINATION applicationsBin/myMotionTest)
 
 add_executable(hexanodes_demo applicationsSrc/hexanodes_demo/hexanodesDemo.cpp applicationsSrc/hexanodes_demo/hexanodesDemoBlockCode.cpp)
-target_link_libraries(hexanodes_demo -lHexanodes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(hexanodes_demo Hexanodes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS hexanodes_demo RUNTIME DESTINATION applicationsBin/hexanodes_demo)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/tmp/SnakeMove.cpp")
         add_executable(tmp applicationsSrc/tmp/SnakeMove.cpp applicationsSrc/tmp/SnakeMoveCode.cpp)
-        target_link_libraries(tmp -lSlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+        target_link_libraries(tmp SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS tmp RUNTIME DESTINATION applicationsBin/tmp)
 else ()
         message(WARNING "Skipping target 'tmp': sources not found in applicationsSrc/tmp")
 endif ()
 
 add_executable(myAppSC applicationsSrc/myAppSC/myAppSC.cpp applicationsSrc/myAppSC/myAppSCCode.cpp applicationsSrc/myAppSC/myAppSCCode.hpp)
-target_link_libraries(myAppSC -lSlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(myAppSC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS myAppSC RUNTIME DESTINATION applicationsBin/myAppSC)
 
 add_executable(demo01_SC applicationsSrc/demo01_SC/demo01_SC.cpp applicationsSrc/demo01_SC/demo01_SCCode.cpp applicationsSrc/demo01_SC/demo01_SCCode.hpp)
-target_link_libraries(demo01_SC -lSlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(demo01_SC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS demo01_SC RUNTIME DESTINATION applicationsBin/demo01_SC)
 
 add_executable(catoms3DRotate applicationsSrc/catoms3DRotate/catoms3DRotate.cpp applicationsSrc/catoms3DRotate/catoms3DRotateCode.cpp)
-target_link_libraries(catoms3DRotate -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(catoms3DRotate Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS catoms3DRotate RUNTIME DESTINATION applicationsBin/catoms3DRotate)
 
 add_executable(catomsCombination applicationsSrc/catomsCombination/catomsCombination.cpp applicationsSrc/catomsCombination/catomsCombinationCode.cpp)
-target_link_libraries(catomsCombination -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(catomsCombination Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS catomsCombination RUNTIME DESTINATION applicationsBin/catomsCombination)
 
 add_executable(e1_flooding applicationsSrc/e1_flooding/e1_flooding.cpp applicationsSrc/e1_flooding/e1_floodingCode.cpp)
-target_link_libraries(e1_flooding -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(e1_flooding BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e1_flooding RUNTIME DESTINATION applicationsBin/e1_flooding)
 
 add_executable(e2_goback applicationsSrc/e2_goback/e2_goback.cpp applicationsSrc/e2_goback/e2_gobackCode.cpp)
-target_link_libraries(e2_goback -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(e2_goback BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e2_goback RUNTIME DESTINATION applicationsBin/e2_goback)
 
 add_executable(e3_lightpath applicationsSrc/e3_lightpath/e3_lightpath.cpp applicationsSrc/e3_lightpath/e3_lightpathCode.cpp)
-target_link_libraries(e3_lightpath -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(e3_lightpath BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS e3_lightpath RUNTIME DESTINATION applicationsBin/e3_lightpath)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/ABCcenter/ABCcenter.cpp")
         add_executable(ABCcenter applicationsSrc/ABCcenter/ABCcenter.cpp applicationsSrc/ABCcenter/ABCcenterCode.cpp)
-        target_link_libraries(ABCcenter -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(ABCcenter BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS ABCcenter RUNTIME DESTINATION applicationsBin/ABCcenter)
 else ()
         message(WARNING "Skipping target 'ABCcenter': sources not found in applicationsSrc/ABCcenter")
@@ -670,19 +668,19 @@ endif ()
 # https://services-stgi.pu-pm.univ-fcomte.fr/visiblesim/generator.php
 # 2022-10-13
 add_executable(borders applicationsSrc/borders/borders.cpp applicationsSrc/borders/bordersCode.cpp)
-target_link_libraries(borders -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+target_link_libraries(borders BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
 install(TARGETS borders RUNTIME DESTINATION applicationsBin/borders)
 
 # Generated by VisibleSim BlockCode Generator
 # https://services-stgi.pu-pm.univ-fcomte.fr/visiblesim/generator.php
 # 2023-02-10
 add_executable(myAppMotionSC applicationsSrc/myAppMotionSC/myAppMotionSC.cpp applicationsSrc/myAppMotionSC/myAppMotionSCCode.cpp)
-target_link_libraries(myAppMotionSC -lSlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+target_link_libraries(myAppMotionSC SlidingCubes -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
 install(TARGETS myAppMotionSC RUNTIME DESTINATION applicationsBin/myAppMotionSC)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/myStabilityApp/myStabilityApp.cpp")
         add_executable(myStabilityApp applicationsSrc/myStabilityApp/myStabilityApp.cpp applicationsSrc/myStabilityApp/myStabilityAppCode.cpp applicationsSrc/myStabilityApp/vector2d.cpp  applicationsSrc/myStabilityApp/mypolygon.cpp)
-        target_link_libraries(myStabilityApp -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+                target_link_libraries(myStabilityApp BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
         install(TARGETS myStabilityApp RUNTIME DESTINATION applicationsBin/myStabilityApp)
 else ()
         message(WARNING "Skipping target 'myStabilityApp': sources not found in applicationsSrc/myStabilityApp")
@@ -690,7 +688,7 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/myCSGapp/myCSGapp.cpp")
         add_executable(myCSGapp applicationsSrc/myCSGapp/myCSGapp.cpp applicationsSrc/myCSGapp/myCSGappCode.cpp)
-        target_link_libraries(myCSGapp -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(myCSGapp Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS myCSGapp RUNTIME DESTINATION applicationsBin/myCSGapp)
 else ()
         message(WARNING "Skipping target 'myCSGapp': sources not found in applicationsSrc/myCSGapp")
@@ -698,7 +696,7 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/myCylinder/myCylinder.cpp")
         add_executable(myCylinder applicationsSrc/myCylinder/myCylinder.cpp applicationsSrc/myCylinder/myCylinderCode.cpp)
-        target_link_libraries(myCylinder -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(myCylinder Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS myCylinder RUNTIME DESTINATION applicationsBin/myCylinder)
 else ()
         message(WARNING "Skipping target 'myCylinder': sources not found in applicationsSrc/myCylinder")
@@ -706,7 +704,7 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/myBridgeApp/myBridgeApp.cpp")
         add_executable(myBridgeApp applicationsSrc/myBridgeApp/myBridgeApp.cpp applicationsSrc/myBridgeApp/myBridgeAppCode.cpp applicationsSrc/myBridgeApp/mypolygon.cpp applicationsSrc/myBridgeApp/vector2D.cpp)
-        target_link_libraries(myBridgeApp -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(myBridgeApp Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS myBridgeApp RUNTIME DESTINATION applicationsBin/myBridgeApp)
 else ()
         message(WARNING "Skipping target 'myBridgeApp': sources not found in applicationsSrc/myBridgeApp")
@@ -714,24 +712,24 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/TextAppGenerator/TextAppGenerator.cpp")
         add_executable(TextAppGenerator applicationsSrc/TextAppGenerator/TextAppGenerator.cpp applicationsSrc/TextAppGenerator/TextAppGeneratorCode.cpp)
-        target_link_libraries(TextAppGenerator -lCatoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+                target_link_libraries(TextAppGenerator Catoms3D -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
         install(TARGETS TextAppGenerator RUNTIME DESTINATION applicationsBin/TextAppGenerator)
 else ()
         message(WARNING "Skipping target 'TextAppGenerator': sources not found in applicationsSrc/TextAppGenerator")
 endif ()
 
 add_executable(myCSGappBB applicationsSrc/myCSGappBB/myCSGappBB.cpp applicationsSrc/myCSGappBB/myCSGappBBCode.cpp)
-target_link_libraries(myCSGappBB -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
+target_link_libraries(myCSGappBB BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32) #
 install(TARGETS myCSGappBB RUNTIME DESTINATION applicationsBin/myCSGappBB)
 
 add_executable(BBbalance applicationsSrc/BBbalance/BBbalance.cpp applicationsSrc/BBbalance/BBbalanceCode.cpp applicationsSrc/BBbalance/SupportPolygon.cpp applicationsSrc/BBbalance/SupportPolygon.h)
-target_link_libraries(BBbalance -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+target_link_libraries(BBbalance BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
 install(TARGETS BBbalance RUNTIME DESTINATION applicationsBin/BBbalance)
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/BBshapeRecognition/BBshapeRecognition.cpp")
         add_executable(BBshapeRecognition applicationsSrc/BBshapeRecognition/BBshapeRecognition.cpp applicationsSrc/BBshapeRecognition/BBshapeRecognitionCode.cpp
                         applicationsSrc/BBshapeRecognition/neuralNetworkData.h)
-        target_link_libraries(BBshapeRecognition -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+                target_link_libraries(BBshapeRecognition BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
         install(TARGETS BBshapeRecognition RUNTIME DESTINATION applicationsBin/BBshapeRecognition)
 else ()
         message(WARNING "Skipping target 'BBshapeRecognition': BBshapeRecognition.cpp not found (this repo snapshot appears incomplete)")
@@ -739,7 +737,7 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/XBlock/XBlock.cpp")
         add_executable(XBlock applicationsSrc/XBlock/XBlock.cpp applicationsSrc/XBlock/XBlockCode.cpp)
-        target_link_libraries(XBlock -lBlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+                target_link_libraries(XBlock BlinkyBlocks -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
         install(TARGETS XBlock RUNTIME DESTINATION applicationsBin/XBlock)
 else ()
         message(WARNING "Skipping target 'XBlock': sources not found in applicationsSrc/XBlock")
@@ -747,7 +745,7 @@ endif ()
 
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/applicationsSrc/datomMotions/datomMotions.cpp")
         add_executable(datomMotions applicationsSrc/datomMotions/datomMotions.cpp applicationsSrc/datomMotions/datomMotionsCode.cpp)
-        target_link_libraries(datomMotions -lDatoms -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
+                target_link_libraries(datomMotions Datoms -lfreeglut -lmuparser -lOpenGL32 -lglu32 -lglew32)
         install(TARGETS datomMotions RUNTIME DESTINATION applicationsBin/datomMotions)
 else ()
         message(WARNING "Skipping target 'datomMotions': datomMotions.cpp not found in applicationsSrc/datomMotions")

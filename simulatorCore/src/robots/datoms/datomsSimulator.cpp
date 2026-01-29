@@ -16,11 +16,7 @@ using namespace BaseSimulator::utils;
 
 namespace Datoms {
 
-#ifdef WIN32
-    string textureDirectory = string(ROOT_DIR) + "/simulatorCore/resources/textures/";
-#else
     string textureDirectory = "../../simulatorCore/resources/textures/";
-#endif
 
 void DatomsSimulator::help() {
     cerr << "VisibleSim:" << endl;

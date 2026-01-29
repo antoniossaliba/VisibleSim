@@ -107,23 +107,6 @@ void initShaders(bool activateShadows) {
     glShadeModel (GL_SMOOTH);					// Select Smooth Shading
     glHint (GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);			// Set Perspective Calculations To Most Accurate
 
-#ifdef WIN32
-    if (activateShadows) {
-        string vertFile = ROOT_DIR;
-        vertFile+="/simulatorCore/resources/shaders/pointtexShadows.vert";
-        cout << vertFile << endl;
-        string fragFile = ROOT_DIR;
-        fragFile+="/simulatorCore/resources/shaders/pointtexShadows.frag";
-        shadersProgram = loadShader(vertFile.c_str(),fragFile.c_str());
-    } else {
-        string vertFile = ROOT_DIR;
-        vertFile+="/simulatorCore/resources/shaders/pointtex.vert";
-        cout << vertFile << endl;
-        string fragFile = ROOT_DIR;
-        fragFile+="/simulatorCore/resources/shaders/pointtex.frag";
-        shadersProgram = loadShader(vertFile.c_str(),fragFile.c_str());
-    }
-#else
     if (activateShadows) {
       shadersProgram = loadShader("../../simulatorCore/resources/shaders/pointtexShadows.vert",
                                   "../../simulatorCore/resources/shaders/pointtexShadows.frag");
@@ -131,7 +114,6 @@ void initShaders(bool activateShadows) {
       shadersProgram = loadShader("../../simulatorCore/resources/shaders/pointtex.vert",
                                   "../../simulatorCore/resources/shaders/pointtex.frag");
     }
-#endif
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);
 

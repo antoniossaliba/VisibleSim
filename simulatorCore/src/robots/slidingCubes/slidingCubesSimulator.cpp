@@ -44,11 +44,7 @@ namespace SlidingCubes {
         world = new SlidingCubesWorld(gridSize, gridScale, argc, argv);
 
         if (GlutContext::GUIisEnabled) {
-#ifdef WIN32
-            string directory = string(ROOT_DIR) + "/simulatorCore/resources/textures/latticeTextures";
-#else
             string directory = "../../simulatorCore/resources/textures/latticeTextures";
-#endif
 
             world->loadTextures(directory);
         }
